@@ -8,15 +8,16 @@ import facebookImg from "../assets/facebook.png"
 const Login = () => {
     return (
         <>
-        <div className="relative flex flex-col lg:flex-row items-center w-full min-h-screen overflow-hidden px-4 lg:px-0">
-            <div className="hidden lg:block absolute left-[2.5%] top-[2.5%] bottom-[2.5%] w-[75%] rounded-t-[90px] rounded-b-4xl overflow-hidden">
+        <div className="flex lg:flex-row items-center w-full lg:min-h-screen overflow-hidden
+         lg:px-0">
+            <div className="absolute top-0 lg:left-[2.5%] lg:top-[2.5%] bottom-[2.5%] w-full lg:w-[75%] lg:rounded-t-[90px] lg:rounded-b-4xl overflow-hidden">
                 <div
                     className="relative w-full h-full bg-cover bg-center bg-no-repeat "
                     style={{ backgroundImage: `url(${astronautImg})` }}
                 >
                     <div className="absolute bottom-[8%] bg-white/20 backdrop-blur-xs rounded-e-4xl shadow-lg px-8 py-6 ">
-                        <p className="text-6xl font-extrabold text-outline-white mb-4">Private</p>
-                        <p className="text-4xl font-extrabold bg-gradient-to-r from-[#FF8031] to-[#FF5D3C] bg-clip-text text-transparent">
+                        <p className="text-3xl lg:text-6xl font-extrabold text-outline-white mb-4">Private</p>
+                        <p className="text-xl lg:text-4xl font-extrabold bg-gradient-to-r from-[#FF8031] to-[#FF5D3C] bg-clip-text text-transparent">
                             Mission To MARS
                         </p>
                     </div>
@@ -24,7 +25,7 @@ const Login = () => {
             </div>
 
             <div
-                className="relative z-10 w-full mx-auto mt-10 text-center flex flex-col items-center justify-center px-6 py-8 rounded-3xl bg-cover bg-no-repeat bg-center lg:absolute lg:mt-0 lg:right-0 lg:top-[150px] lg:h-[calc(100%-300px)] lg:w-[28%] lg:rounded-l-4xl lg:rounded-tr-none lg:px-16 lg:py-0"
+                className="w-full mx-auto mt-10 text-center flex flex-col items-center justify-center px-6 py-8  bg-cover bg-no-repeat bg-center lg:absolute lg:mt-0 lg:right-0 lg:top-[150px] lg:h-[calc(100%-240px)] lg:w-[28%] lg:rounded-l-4xl lg:rounded-tr-none lg:px-16 lg:py-0"
                 style={{ backgroundImage: `url(${loginBg})` }}
             >
                 <h2 className="text-[32px] md:text-[40px] lg:text-[48px] rajdhani-font font-semibold mb-4 text-white">Login</h2>
@@ -51,15 +52,15 @@ const Login = () => {
                     <div className="flex-1 h-px bg-white/60" />
                 </div>
                 
-                <div className="bg-white p-3 flex items-center justify-center rounded-xl mt-4 w-full h-[52px]">
+                <button className="bg-white p-3 flex items-center justify-center rounded-xl mt-4 w-full h-[52px]">
                     <img className="w-[24px] h-[24px] mr-2" src={googleImg} alt="google login" />
                     <p className="text-xs">Login with <span className="font-bold">Google</span></p>
-                </div> 
+                </button> 
                 
-                <div className="bg-white p-3 flex items-center justify-center rounded-xl mt-4 w-full h-[52px]">
+                <button className="bg-white p-3 flex items-center justify-center rounded-xl mt-4 w-full h-[52px]">
                     <img className="w-[24px] h-[24px] mr-2" src={facebookImg} alt="facebook login" />
                     <p className="text-xs">Login with <span className="font-bold">Facebook</span></p>
-                </div> 
+                </button> 
             </div>
         </div>
         </>
