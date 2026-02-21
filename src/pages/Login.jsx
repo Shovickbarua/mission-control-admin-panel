@@ -4,8 +4,19 @@ import { FiUser } from "react-icons/fi";
 import { RiLock2Line } from "react-icons/ri";
 import googleImg from "../assets/google.png"
 import facebookImg from "../assets/facebook.png"
+import Input from "../components/Input";
+import { useNavigate } from "react-router";
+
 
 const Login = () => {
+    const navigate = useNavigate()
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log("submitted")
+        navigate("/admin")
+    }
+
     return (
         <>
         <div className="relative flex flex-col lg:flex-row items-center w-full min-h-screen lg:overflow-hidden px-4 lg:px-0">
@@ -30,17 +41,13 @@ const Login = () => {
                 <h2 className="text-[32px] md:text-[40px] lg:text-[48px] rajdhani-font font-semibold mb-4 text-white">Login</h2>
                 <p className="text-white mb-8 text-sm md:text-base">Welcome back! Please login to continue.</p>
 
-                <form onSubmit={(e) => e.preventDefault()} className="w-full">
-                    <div className="border border-white/80 p-3 flex items-center rounded-xl w-full h-[52px]">
-                        <FiUser className="text-white/80 mr-2" />
-                        <input className="bg-transparent outline-none text-white/80 text-xs w-full" type="text" placeholder="Username" />
-                    </div> 
-                    <div className="border border-white/80 p-3 flex items-center rounded-xl mt-4 w-full h-[52px]">
-                        <RiLock2Line className="text-white/80 mr-2" />
-                        <input className="bg-transparent outline-none text-white/80 text-xs w-full" type="password" placeholder="Password" />
-                    </div> 
+                <form onSubmit={handleSubmit} className="w-full">
+                    {/* Username */}
+                    <Input icon={FiUser} type="text" placeholder="Username" />
+                    {/* Password */}
+                    <Input className="mt-4" icon={RiLock2Line} type="password" placeholder="Password" />
 
-                    <button className="text-white font-bold px-7 py-5 text-xs rounded-xl mt-5 bg-gradient-to-r from-[#3CAA7B] to-[#296E49]">LOGIN NOW</button>
+                    <button type="submit" className="text-white font-bold px-7 py-5 text-xs rounded-xl mt-5 bg-gradient-to-r from-[#3CAA7B] to-[#296E49]">LOGIN NOW</button>
                 </form>
 
                 <div className="flex items-center gap-1 mt-5 w-full">
