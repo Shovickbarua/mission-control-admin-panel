@@ -14,3 +14,59 @@ body {
   color: transparent;
   -webkit-text-stroke: 2px #ffffff;
 }
+
+.mobile-sidebar-panel {
+  animation: mobileSidebarIn 0.25s ease-out forwards;
+}
+
+@keyframes mobileSidebarIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.mobile-sidebar-panel-out {
+  animation: mobileSidebarOut 0.25s ease-in forwards;
+}
+
+@keyframes mobileSidebarOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.mobile-sidebar-overlay {
+  animation: mobileSidebarFadeIn 0.2s ease-out forwards;
+}
+
+@keyframes mobileSidebarFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mobile-sidebar-overlay-out {
+  animation: mobileSidebarFadeOut 0.2s ease-in forwards;
+}
+
+@keyframes mobileSidebarFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
