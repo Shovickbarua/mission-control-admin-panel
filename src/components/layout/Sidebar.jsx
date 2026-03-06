@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
 import { FiHome, FiUsers, FiMap, FiSettings } from "react-icons/fi";
+import rocketLogo from "../../assets/rocket-logo-2.png";
 
 const Sidebar = ({ isSidebarVisible, isMobileSidebarOpen, isMobileSidebarClosing, onCloseMobileSidebar }) => {
   const menuItems = [
@@ -13,7 +14,9 @@ const Sidebar = ({ isSidebarVisible, isMobileSidebarOpen, isMobileSidebarClosing
     <div className="h-full flex flex-col">
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-[#3CAA7B] to-[#296E49]" />
+          <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-[#3CAA7B] to-[#296E49]">
+            {/* <img src={rocketLogo} alt="Mission Control" className="h-8 w-8" /> */}
+          </div>
           <div>
             <p className="rajdhani-font text-xl font-semibold text-slate-900">Mission Control</p>
             <p className="text-xs text-slate-500">Admin Panel</p>
