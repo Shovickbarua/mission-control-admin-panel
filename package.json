@@ -1,6 +1,9 @@
 {
   "name": "admin-panel",
-  "private": true,
+  "author": {
+    "name": "Shovick Barua",
+    "url": "https://shovickbarua.com"
+  },
   "version": "0.0.0",
   "type": "module",
   "scripts": {

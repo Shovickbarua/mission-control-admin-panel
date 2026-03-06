@@ -4,6 +4,12 @@ Mission Control is a React + Vite admin panel with a custom login screen and a l
 
 The UI is built with Tailwind CSS v4 utilities and custom fonts (Poppins and Rajdhani). It is fully responsive for mobile, tablet, and desktop, with animated sidebars on the admin pages.
 
+## Developed by
+
+This project was developed by **Shovick Barua**. You can view his portfolio at [shovickbarua.com](https://shovickbarua.com).
+
+---
+
 ## Features
 
 - Custom login screen
