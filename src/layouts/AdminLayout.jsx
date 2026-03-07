@@ -10,6 +10,7 @@ const AdminLayout = () => {
   const location = useLocation();
 
   const handleOpenMobileSidebar = () => {
+    console.log("Opening mobile sidebar");
     setIsMobileSidebarClosing(false);
     setIsMobileSidebarOpen(true);
   };
@@ -25,18 +26,9 @@ const AdminLayout = () => {
   // Close mobile sidebar on route change
   useEffect(() => {
     if (isMobileSidebarOpen) {
-      // Small delay to avoid synchronous state update in effect warning
-      const closeTimer = setTimeout(() => {
-        setIsMobileSidebarClosing(true);
-        const timer = setTimeout(() => {
-          setIsMobileSidebarOpen(false);
-          setIsMobileSidebarClosing(false);
-        }, 250);
-        return () => clearTimeout(timer);
-      }, 0);
-      return () => clearTimeout(closeTimer);
+      handleCloseMobileSidebar();
     }
-  }, [location.pathname, isMobileSidebarOpen]);
+  }, [location.pathname]);
 
   const getPageTitle = () => {
     const path = location.pathname;

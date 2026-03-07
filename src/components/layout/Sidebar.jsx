@@ -98,7 +98,7 @@ const Sidebar = ({ isSidebarVisible, isMobileSidebarOpen, isMobileSidebarClosing
             aria-label="Close navigation overlay"
           />
           <div
-            className={`relative z-50 h-full w-64 bg-white border-r border-slate-200 shadow-xl px-6 py-8 flex flex-col transform transition-transform duration-300 ${
+            className={`relative z-50 h-full w-64 bg-white border-r border-slate-200 shadow-xl px-6 py-8 flex flex-col ${
               isMobileSidebarClosing ? "mobile-sidebar-panel-out" : "mobile-sidebar-panel"
             }`}
           >
